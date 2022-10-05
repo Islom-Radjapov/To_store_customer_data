@@ -1,5 +1,5 @@
 from aiogram.types import Location, message
-from numpy import msg
+# from numpy import msg
 
 from sql_query import Database
 # from main import Registration
@@ -12,7 +12,7 @@ from aiogram.dispatcher import FSMContext
 
 
 
-API_TOKEN = '5500425634:AAHqo9K3FeFgRg25UFytX_oszZbscJ_e6j4'   # AbuBakr
+# API_TOKEN = '5500425634:AAHqo9K3FeFgRg25UFytX_oszZbscJ_e6j4'   # AbuBakr
 # API_TOKEN = '5366807852:AAERuJaIYQcn5RbsX1kNEKHOLgrouupjh3w'     # Islom
 # logging.basicConfig(level=logging.INFO)
 
@@ -40,9 +40,9 @@ async def register(message: types.Message ):
     await bot.send_message(message.from_user.id, "Aссалому алеком\n Озингизга керакли болимни танланг",reply_markup=mr.markup)
 
 
-@dp.message_handler(content_types='location')
-async def file_1(msg: types.Message):
-    await bot.send_message(message.from_user.id, "Aссалому алеком\n Озингизга керакли болимни танланг",reply_markup=mr.location)
+# @dp.message_handler(content_types='location')
+# async def file_1(msg: types.Message):
+#     await bot.send_message(message.from_user.id, "Aссалому алеком\n Озингизга керакли болимни танланг",reply_markup=mr.location)
 
 
 @dp.message_handler(content_types=['location'])
@@ -51,12 +51,12 @@ async def handle_location(message: types.Message):
     lon = message.location.longitude
     reply = "latitude:  {}\nlongitude: {}".format(lat, lon)
     await message.answer(reply, reply_markup=types.ReplyKeyboardRemove())
-    print("latitude:", lat)
+    print("latitude:", type(lat))
     print("longitude:", lon)
 
 
-    lokatsiya = msg.location
-    print(lokatsiya.longitude, lokatsiya.latitude)
+    # lokatsiya = msg.location
+    # print(lokatsiya.longitude, lokatsiya.latitude)
 @dp.callback_query_handler(text='back')
 async def back(message: types.CallbackQuery):
     await bot.send_message(message.from_user.id, "Aссалому алеком\n Озингизга керакли болимни танланг",
