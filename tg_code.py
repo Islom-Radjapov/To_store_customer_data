@@ -13,7 +13,7 @@ from aiogram.dispatcher import FSMContext
 
 # API_TOKEN = '5500425634:AAHqo9K3FeFgRg25UFytX_oszZbscJ_e6j4'   # AbuBakr
 # API_TOKEN = '5366807852:AAERuJaIYQcn5RbsX1kNEKHOLgrouupjh3w'     # Islom
-# logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO)
 
 # API_TOKEN = '5537289338:AAEwSGOvbS8XlA98MYG1TX87gqT-EkKOVjk'   # AbuBakr
 # API_TOKEN = '5366807852:AAERuJaIYQcn5RbsX1kNEKHOLgrouupjh3w'     # Islom
